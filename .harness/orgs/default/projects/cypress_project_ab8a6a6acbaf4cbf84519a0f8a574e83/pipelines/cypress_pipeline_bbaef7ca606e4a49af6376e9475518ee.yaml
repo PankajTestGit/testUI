@@ -1,0 +1,14 @@
+pipeline:
+  name: cypress_pipeline_bbaef7ca606e4a49af6376e9475518ee
+  identifier: cypress_pipeline_bbaef7ca606e4a49af6376e9475518ee
+  projectIdentifier: cypress_project_ab8a6a6acbaf4cbf84519a0f8a574e83
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: cypress_stage_b49e0553195641a4a24c653e148ddb0a
+        identifier: cypress_stage_b49e0553195641a4a24c653e148ddb0a
+        tags: {}
+        template:
+          templateRef: cypress_template_bd79cca12c2d46bdb952f980d083c6ea
+          versionLabel: v1
