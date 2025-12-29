@@ -1,0 +1,20 @@
+template:
+  name: cypress_template_508cb8ca250d49c48b9b107fc35c75aa
+  identifier: cypress_template_508cb8ca250d49c48b9b107fc35c75aa
+  versionLabel: v12
+  type: Step
+  projectIdentifier: cypress_project_e48a72f3105242a29812ba96c5352779
+  orgIdentifier: default
+  tags: {}
+  spec:
+    timeout: 10m
+    type: ShellScript
+    spec:
+      shell: Bash
+      onDelegate: true
+      source:
+        type: Inline
+        spec:
+          script: echo 'hello'
+      environmentVariables: []
+      outputVariables: []
