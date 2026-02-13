@@ -1,0 +1,18 @@
+inputSet:
+  pipeline:
+    identifier: UI_Repo_Default
+    stages:
+      - stage:
+          identifier: S1
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ShellScript_1
+                    type: ShellScript
+                    timeout: 10m
+  name: WorkingTest7
+  identifier: WorkingTest7
+  orgIdentifier: default
+  projectIdentifier: Pankaj
