@@ -31,7 +31,7 @@ pipeline:
         timeout: 10m
         variables:
           - name: TestString
-            type: String
+            type: Number
             description: ""
             required: true
             value: <+input>
