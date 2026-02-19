@@ -28,3 +28,10 @@ pipeline:
                     outputVariables: []
                   timeout: <+input>
         tags: {}
+        timeout: 10m
+        variables:
+          - name: TestString
+            type: String
+            description: ""
+            required: true
+            value: <+input>
