@@ -1,0 +1,59 @@
+template:
+  name: cypress_template_aac73e1e163c4dcea51cceeb6f1c8290
+  identifier: cypress_template_aac73e1e163c4dcea51cceeb6f1c8290
+  versionLabel: v1.0
+  type: Stage
+  projectIdentifier: cypress_project_a57b8cc9548443748bf2ffc80651a5a0
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Deployment
+    spec:
+      deploymentType: Kubernetes
+      service:
+        serviceRef: cypress_service_742800d7dcaf49c2adc43d380cb64bfd
+      environment:
+        environmentRef: cypress_env_93d9b123d5394898a0cbc2f4c4931a90
+        environmentInputs:
+          identifier: cypress_env_93d9b123d5394898a0cbc2f4c4931a90
+          type: Production
+          variables:
+            - name: var1
+              type: String
+              value: <+input>
+            - name: var2
+              type: String
+              value: <+input>
+        deployToAll: false
+        infrastructureDefinitions:
+          - identifier: cypress_infra_487efb46010243dea952f322322b9870
+            inputs:
+              identifier: cypress_infra_487efb46010243dea952f322322b9870
+              type: KubernetesDirect
+              spec:
+                connectorRef: <+input>
+                namespace: <+input>
+      execution:
+        steps:
+          - step:
+              name: Rollout Deployment
+              identifier: rolloutDeployment
+              type: K8sRollingDeploy
+              timeout: 10m
+              spec:
+                skipDryRun: false
+                pruningEnabled: false
+        rollbackSteps:
+          - step:
+              name: Rollback Rollout Deployment
+              identifier: rollbackRolloutDeployment
+              type: K8sRollingRollback
+              timeout: 10m
+              spec:
+                pruningEnabled: false
+    failureStrategies:
+      - onFailure:
+          errors:
+            - AllErrors
+          action:
+            type: StageRollback
