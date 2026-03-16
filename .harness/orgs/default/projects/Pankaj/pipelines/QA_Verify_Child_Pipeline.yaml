@@ -1,0 +1,30 @@
+pipeline:
+  name: QA_Verify_Child_Pipeline
+  identifier: QA_Verify_Child_Pipeline
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: S1
+        identifier: S1
+        description: ""
+        type: Pipeline
+        spec:
+          org: default
+          project: Pankaj
+          pipeline: Jan_23_Non_Default
+          gitBranch: main-patch
+          inputs:
+            identifier: Jan_23_Non_Default
+            stages:
+              - stage:
+                  identifier: S1
+                  type: Custom
+                  spec:
+                    execution:
+                      steps:
+                        - step:
+                            identifier: ShellScript_1
+                            type: ShellScript
+                            timeout: <+input>
