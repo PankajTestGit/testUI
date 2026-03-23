@@ -1,0 +1,18 @@
+template:
+  name: cypress_template_6281823e0e644d1393378108d9b30f95
+  identifier: cypress_template_6281823e0e644d1393378108d9b30f95
+  versionLabel: v1
+  type: Pipeline
+  projectIdentifier: cypress_project_91bdaa3ecb194a9e857857133ee2de4c
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: cypress_stage_3dc56bbf9e0c4744874360ebcd81efc7
+          identifier: cypress_stage_3dc56bbf9e0c4744874360ebcd81efc7
+          tags: {}
+          template:
+            templateRef: cypress_template_5888f953865d4cb4bdd31ec7d572ef71
+            versionLabel: v1
+            gitBranch: main-patch-1
