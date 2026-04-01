@@ -1,0 +1,35 @@
+inputSet:
+  name: t
+  identifier: t
+  orgIdentifier: default
+  projectIdentifier: Pankaj
+  pipeline:
+    identifier: QA_Verify_Child_Pipeline
+    stages:
+      - stage:
+          identifier: S1
+          type: Pipeline
+          spec:
+            inputs:
+              identifier: Jan_23_Non_Default
+              stages:
+                - stage:
+                    identifier: S1
+                    type: Custom
+                    spec:
+                      execution:
+                        steps:
+                          - step:
+                              identifier: ShellScript_1
+                              type: ShellScript
+                              timeout: 10m
+      - stage:
+          identifier: S2
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ShellScript_1
+                    type: ShellScript
+                    timeout: 10m
