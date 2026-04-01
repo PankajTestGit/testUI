@@ -1,0 +1,22 @@
+pipeline:
+  name: "Pipeline in diff repo non default branch "
+  identifier: Pipeline_in_diff_repo_non_default_branch
+  tags: {}
+  template:
+    templateRef: Pipeline_Template_in_Git_Default_Branch
+    versionLabel: V1
+    gitBranch: main
+    templateInputs:
+      stages:
+        - stage:
+            identifier: S1
+            type: Custom
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: ShellScript_1
+                      type: ShellScript
+                      timeout: <+input>
+  projectIdentifier: Pankaj
+  orgIdentifier: default
