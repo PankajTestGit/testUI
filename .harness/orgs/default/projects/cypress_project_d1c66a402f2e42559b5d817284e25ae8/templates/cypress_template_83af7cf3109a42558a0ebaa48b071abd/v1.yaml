@@ -16,3 +16,11 @@ template:
             templateRef: cypress_template_f434b0f5a94543fd959110af91819764
             versionLabel: v1
             gitBranch: main-patch-1
+      - stage:
+          name: cypress_stage_02a35ab4043e47598ec013eb5505c68e
+          identifier: cypress_stage_02a35ab4043e47598ec013eb5505c68e
+          tags: {}
+          template:
+            templateRef: cypress_template_37dbd96f36e04e7098fb1a525e92988f
+            versionLabel: v1
+            gitBranch: main-patch
