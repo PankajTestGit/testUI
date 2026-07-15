@@ -1,0 +1,34 @@
+template:
+  name: cypress_template_88937d8831924bbd91476378339735af
+  identifier: cypress_template_88937d8831924bbd91476378339735af
+  versionLabel: v1
+  type: Stage
+  projectIdentifier: cypress_project_1053d0344b63493b9da880ca87618733
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              type: ShellScript
+              name: Shell Script
+              identifier: ShellScript
+              spec:
+                shell: Bash
+                onDelegate: true
+                source:
+                  type: Inline
+                  spec:
+                    script: sleep 150s
+                environmentVariables: []
+                outputVariables: []
+              timeout: 10m
+    failureStrategies:
+      - onFailure:
+          errors:
+            - AllErrors
+          action:
+            type: StageRollback
+    variables: []
