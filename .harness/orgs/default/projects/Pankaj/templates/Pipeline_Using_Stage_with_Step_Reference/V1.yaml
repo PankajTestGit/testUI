@@ -1,0 +1,17 @@
+template:
+  name: Pipeline Using Stage with Step Reference
+  identifier: Pipeline_Using_Stage_with_Step_Reference
+  versionLabel: V1
+  type: Pipeline
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: S1
+          identifier: S1
+          tags: {}
+          template:
+            templateRef: Stage_Shell_Step_Reference
+            versionLabel: V1
