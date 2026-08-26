@@ -1,0 +1,34 @@
+template:
+  name: Pipeline Using Stage with Step Reference
+  identifier: Pipeline_Using_Stage_with_Step_Reference
+  type: Pipeline
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: S1
+          identifier: S1
+          tags: {}
+          template:
+            templateRef: Stage_Shell_Step_Reference
+            versionLabel: V2
+            gitBranch: main-patch-26-Aug-26-2
+            templateInputs:
+              type: Custom
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: S1
+                        template:
+                          templateInputs:
+                            type: ShellScript
+                            timeout: <+input>
+                            spec:
+                              source:
+                                type: Inline
+                                spec:
+                                  script: <+input>
+  versionLabel: V2
