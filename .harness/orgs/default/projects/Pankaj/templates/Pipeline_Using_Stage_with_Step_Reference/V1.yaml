@@ -15,3 +15,14 @@ template:
           template:
             templateRef: Stage_Shell_Step_Reference
             versionLabel: V1
+            templateInputs:
+              type: Custom
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: S1
+                        template:
+                          templateInputs:
+                            type: ShellScript
+                            timeout: <+input>
