@@ -1,0 +1,25 @@
+template:
+  name: cypress_template_3176dab6962c499a9df0a3230ec2d2a0
+  identifier: cypress_template_3176dab6962c499a9df0a3230ec2d2a0
+  versionLabel: v1
+  type: Stage
+  projectIdentifier: cypress_project_acdff669e2354469b8e70847364cea7e
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              name: cypress_template_caca471fda6646d6ba71104328311259
+              identifier: cypress_template_caca471fda6646d6ba71104328311259
+              template:
+                templateRef: cypress_template_caca471fda6646d6ba71104328311259
+                versionLabel: v12
+                gitBranch: main-patch-1
+    failureStrategies:
+      - onFailure:
+          errors: []
+          action:
+            type: MarkAsSuccess
